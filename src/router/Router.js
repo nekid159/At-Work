@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react';
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
-import RoutesConfig from './RoutesConfig';
-import Layout from '../components/Layout';
+import React, { useEffect } from "react";
+import { BrowserRouter, useLocation } from "react-router-dom";
+import RoutesConfig from "./RoutesConfig";
+import Layout from "../components/Layout";
 
 const PageTitleUpdater = () => {
     const location = useLocation();
@@ -9,9 +9,9 @@ const PageTitleUpdater = () => {
 
     const getPageName = (url) => {
         const matchedRoute = RoutesConfig.find((route) => route.url === url);
-        return matchedRoute ? matchedRoute.name : 'AT-WORK';
+        return matchedRoute ? matchedRoute.name : "AT-WORK";
     };
-  
+
     useEffect(() => {
         const pageTitle = getPageName(currentPage);
         document.title = pageTitle;
@@ -21,10 +21,10 @@ const PageTitleUpdater = () => {
 };
 
 const Router = () => {
-  return (
+    return (
         <BrowserRouter>
-            <PageTitleUpdater/>
-            <Layout/>
+            <PageTitleUpdater />
+            <Layout />
         </BrowserRouter>
     );
 };

@@ -20,11 +20,11 @@ const AuthPage = () => {
                 <div className={styles.square}>
                     <div className={styles.switchSelect}>
                         <div className={styles.buttonsContainer}>
-                            <button className={`${styles.button2} ${selectedButton === "email" ? styles.selectedButton : ""}`} onClick={() => handleButtonSelect("email")}>
-                                Почта
+                            <button className={`${styles.button2} ${selectedButton === "email" ? styles.selectedButtonEmail : ""}`} onClick={() => handleButtonSelect("email")}>
+                                <span className={styles.buttonText}>Почта</span>
                             </button>
-                            <button className={`${styles.button2} ${selectedButton === "phone" ? styles.selectedButton : ""}`} onClick={() => handleButtonSelect("phone")}>
-                                Телефон
+                            <button className={`${styles.button2} ${selectedButton === "phone" ? styles.selectedButtonPhone : ""}`} onClick={() => handleButtonSelect("phone")}>
+                                <span className={styles.buttonText}>Телефон</span>
                             </button>
                         </div>
                     </div>

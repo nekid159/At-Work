@@ -50,17 +50,6 @@ margin-bottom: 16;
     margin-bottom: 16px;
     background-color: lightgray;
 }
-
-.button {
-    padding: 12px 0;
-    border: unset;
-    background-color: transparent;
-    box-shadow: 1px 3px 8px rgba(54, 94, 125, 0.15);
-    background-color: white;
-    color: black;
-    border-radius: 6px;
-}
-
 .button2 {
     padding: 12px 0;
     border: unset;
@@ -111,4 +100,14 @@ margin-bottom: 16;
 .forgotPasswordLink {
     text-decoration: none;
     color: inherit;
+}
+.selectedButton {
+    padding: 12px 0;
+    border: unset;
+    background-color: transparent;
+    box-shadow: 1px 3px 8px rgba(54, 94, 125, 0.15);
+    background-color: white;
+    color: black;
+    border-radius: 6px;
+    transition: background-color 0.3s, box-shadow 0.3s; 
 }

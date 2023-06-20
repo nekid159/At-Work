@@ -4,6 +4,11 @@ import styles from "../assets/styles/stylesForPages/authPage/auth.module.css";
 
 const AuthPage = () => {
     const [showPassField, setShowPassField] = useState(false);
+    const [selectedButton, setSelectedButton] = useState("email");
+
+    const handleButtonSelect = (buttonType) => {
+        setSelectedButton(buttonType);
+    };
 
     const handleContinueClick = () => {
         setShowPassField(true);
@@ -15,8 +20,12 @@ const AuthPage = () => {
                 <div className={styles.square}>
                     <div className={styles.switchSelect}>
                         <div className={styles.buttonsContainer}>
-                            <button className={styles.button}>Почта</button>
-                            <button className={styles.button2}>Телефон</button>
+                            <button className={`${styles.button2} ${selectedButton === "email" ? styles.selectedButton : ""}`} onClick={() => handleButtonSelect("email")}>
+                                Почта
+                            </button>
+                            <button className={`${styles.button2} ${selectedButton === "phone" ? styles.selectedButton : ""}`} onClick={() => handleButtonSelect("phone")}>
+                                Телефон
+                            </button>
                         </div>
                     </div>
                     <input className={styles.email} type="text" placeholder="Введите имя пользователя" />
